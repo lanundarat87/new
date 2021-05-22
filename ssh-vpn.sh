@@ -12,13 +12,13 @@ source /etc/os-release
 ver=$VERSION_ID
 
 #detail nama perusahaan
-country=ID
-state=Indonesia
-locality=Indonesia
-organization=lostserver.xyz
-organizationalunit=lostserver.xyz
-commonname=lostserver.xyz
-email=admin@lostserver.xyz
+country=MY
+state=Kuala Lumpur
+locality=Kl
+organization=redfoxvpn.xyz
+organizationalunit=redfoxvpn.xyz
+commonname=redfoxvpn.xyz
+email=admin@redfoxvpn.xyz
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/lanundarat87/new/main/password"
