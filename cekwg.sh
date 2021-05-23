@@ -62,5 +62,5 @@ listClients(){
 }
 listClients
 echo "-------------------------------";
-echo -e "By LostServer"
+echo -e "By Badboy"
 
