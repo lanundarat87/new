@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# By LostServer
+# By Badboy
 # ==================================================
 
 # initialisasi var
@@ -54,7 +54,7 @@ keepalive 5 30
 comp-lzo
 persist-key
 persist-tun
-status lostserver-tcp-1194.log
+status redfoxvpn-tcp-1194.log
 verb 3
 END
 
@@ -79,7 +79,7 @@ keepalive 5 30
 comp-lzo
 persist-key
 persist-tun
-status lostserver-udp-2200.log
+status redfoxvpn-udp-2200.log
 verb 3
 END
 
@@ -104,7 +104,7 @@ sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 
 # Konfigurasi dan Setting untuk Client
 mkdir clientconfig
-cp /etc/openvpn/{lostserver.crt,lostserver.key,ca.crt,ta.key} clientconfig/
+cp /etc/openvpn/{badboy.crt,badboy.key,ca.crt,ta.key} clientconfig/
 cd clientconfig
 
 # Buat config client UDP 1194
