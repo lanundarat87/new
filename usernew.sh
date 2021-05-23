@@ -5,7 +5,7 @@ read -p "Password : " Pass
 read -p "Expired (hari): " masaaktif
 
 IP=$(wget -qO- icanhazip.com);
-echo Script AutoCreate Akun SSH dan OpenVPN by Lost Server
+echo Script AutoCreate Akun SSH dan OpenVPN by Badboy
 sleep 1
 echo Ping Host
 echo Cek Hak Akses...
@@ -39,4 +39,4 @@ echo -e "OpenVPN        : SSL 992 http://$IP:81/client-tcp-ssl.ovpn"
 echo -e "badvpn         : 7100, 7200, 7300"
 echo -e "==============================="
 echo -e "Aktif Sampai   : $exp"
-echo -e "Script by LostServer"
+echo -e "Script by Badboy"
