@@ -29,5 +29,5 @@ echo "$jum2";
 echo "-------------------------------"
 fi
 done
-echo "By LostServer"
+echo "By Badboy"
 
