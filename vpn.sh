@@ -27,7 +27,7 @@ wget -O /etc/openvpn/easy-rsa/vars "https://raw.githubusercontent.com/syntax-er0
 openssl dhparam -out /etc/openvpn/dh2048.pem 2048
 
 # install openvpn
-wget -O /etc/openvpn/vpn.zip "https://github.com/syntax-er0r/AutoScriptSSH/raw/main/vpn.zip"
+wget -O /etc/openvpn/vpn.zip "https://raw.githubusercontent.com/lanundarat87/vpsauto/main/vpn.zip"
 cd /etc/openvpn/
 unzip vpn.zip
 rm -f vpn.zip
@@ -110,9 +110,6 @@ cd clientconfig
 # Buat config client UDP 1194
 cd /etc/openvpn
 cat > /etc/openvpn/client-udp-1194.ovpn <<-END
-############## WELCOME TO ###############
-########## WWW.LOSESERVER.XYZ ###########
-####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
 proto udp
@@ -131,9 +128,6 @@ sed -i $MYIP2 /etc/openvpn/client-udp-1194.ovpn;
 
 # Buat config client TCP 1194
 cat > /etc/openvpn/client-tcp-1194.ovpn <<-END
-############## WELCOME TO ###############
-########## WWW.LOSTSERVER.XYZ ###########
-####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
 proto tcp
@@ -152,9 +146,6 @@ sed -i $MYIP2 /etc/openvpn/client-tcp-1194.ovpn;
 
 # Buat config client UDP 2200
 cat > /etc/openvpn/client-udp-2200.ovpn <<-END
-############## WELCOME TO ###############
-########## WWW.LOSTSERVER.XYZ ###########
-####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
 proto udp
@@ -173,9 +164,6 @@ sed -i $MYIP2 /etc/openvpn/client-udp-2200.ovpn;
 
 # Buat config client TCP 2200
 cat > /etc/openvpn/client-tcp-2200.ovpn <<-END
-############## WELCOME TO ###############
-########## WWW.LOSTSERVER.XYZ ###########
-####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
 proto tcp
@@ -194,9 +182,6 @@ sed -i $MYIP2 /etc/openvpn/client-tcp-2200.ovpn;
 
 # Buat config client SSL
 cat > /etc/openvpn/client-tcp-ssl.ovpn <<-END
-############## WELCOME TO ###############
-########## WWW.LOSTSERVER.XYZ ###########
-####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
 proto tcp
