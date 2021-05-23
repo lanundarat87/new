@@ -45,6 +45,6 @@ Username     : $VPN_USER
 Password     : $VPN_PASSWORD
 Expired ON   : $exp
 
-By LostServer
+By Badboy
 =================================
 EOF
