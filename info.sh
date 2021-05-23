@@ -2,4 +2,4 @@
 
 clear
 neofetch
-echo -e "by LostServer"
+echo -e "by Badboy"
