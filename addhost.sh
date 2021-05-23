@@ -1,8 +1,20 @@
 #!/bin/bash
+read -p "bug : " bughost
+IP=$(wget -qO- icanhazip.com);
+echo Script AutoCreate Akun SSH dan OpenVPN by Badboy
+sleep 1
+echo Ping Host
+echo Cek Hak Akses...
+sleep 0.5
+echo Permission Accepted
+clear
+sleep 0.5
+clear
 apt install jq curl -y
 DOMAIN=redfoxvpn.xyz
+Bug=$bughost
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.redfoxvpn.xyz
+SUB_DOMAIN=${Bug}.${sub}.redfoxvpn.xyz
 CF_ID=faizalazrony93@gmail.com
 CF_KEY=c482a5e41168e7e53cc170b1d5b4a32755914
 set -euo pipefail
@@ -17,7 +29,8 @@ RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" | jq -r .result[0].id)
-
+sleep 0.2
+clear
 if [[ "${#RECORD}" -le 10 ]]; then
      RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
      -H "X-Auth-Email: ${CF_ID}" \
