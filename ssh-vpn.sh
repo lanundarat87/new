@@ -168,16 +168,11 @@ accept = 992
 connect = 127.0.0.1:1194
 
 END
-
-# make a certificate
-openssl genrsa -out key.pem 2048
-openssl req -new -x509 -key key.pem -out cert.pem -days 1095 \
--subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
-cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
-
-# konfigurasi stunnel
+# configure stunnel
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
-/etc/init.d/stunnel4 restart
+wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/lanundarat87/xxx/main/Res/Other/stunnel.pem"
+service stunnel4 restart
+cd
 
 #OpenVPN
 wget https://raw.githubusercontent.com/lanundarat87/new/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
