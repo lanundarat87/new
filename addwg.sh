@@ -8,8 +8,8 @@ else
 SERVER_PUB_IP=$IP
 fi
 	echo ""
-	echo "Tell me a name for the client."
-	echo "Use one word only, no special characters."
+	echo "Sila Masukkan Nama Client."
+	echo "Hanya Satu perkataan tampa simbol."
 
 	until [[ ${CLIENT_NAME} =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Client name: " -e CLIENT_NAME
@@ -17,7 +17,7 @@ fi
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
-			echo "A client with the specified name was already created, please choose another name."
+			echo "Nama Client Telah Digunakan, Sila Pilih Nama Lain."
 			exit 1
 		fi
 	done
@@ -33,9 +33,9 @@ fi
 	fi
 
 	# Adguard DNS by default
-	CLIENT_DNS_1="176.103.130.130"
+	CLIENT_DNS_1="1.1.1.1"
 	
-	CLIENT_DNS_2="176.103.130.131"
+	CLIENT_DNS_2="1.0.0.1"
 	MYIP=$(wget -qO- ifconfig.co);
 	read -p "Expired (days): " masaaktif
 	exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
