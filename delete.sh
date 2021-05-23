@@ -14,7 +14,7 @@
                chmod +x /usr/local/bin/deleteduser
                fi
                hariini=`date +%d-%m-%Y`
-               echo "Autoscript by LostServer"
+               echo "Autoscript by Badboy"
                echo "Thank you for removing the EXPIRED USERS"
                echo "--------------------------------------"
                cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /tmp/expirelist.txt
