@@ -239,7 +239,7 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/lanundarat87/new/main/addhost.sh"
+wget -O addhost "https://raw.githubusercontent.com/lanundarat87/new/main/addhost.sh"
 wget -O about "https://raw.githubusercontent.com/lanundarat87/new/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/lanundarat87/new/main/menu.sh"
 wget -O usernew "https://raw.githubusercontent.com/lanundarat87/new/main/usernew.sh"
