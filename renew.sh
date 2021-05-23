@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : LostServer
+# Script by : Badboy
 clear
 echo -e ""
 echo -e "======================================"
