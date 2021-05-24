@@ -1,4 +1,9 @@
 #!/bin/bash
+reset
+echo -e "\e[1;33m==============================================================="
+echo -e "\e[1;36m                    AutoScriptVPS by  Badboy                   "
+echo -e "\e[1;36m                           Redfox VPN                          "
+echo -e "\e[1;33m==============================================================="
 IP=$(wget -qO- icanhazip.com);
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Usernew: " -e user
@@ -29,5 +34,4 @@ Port          : 5555
 Cert          : http://$IP:81/server.crt
 Expired On    : $exp
 ================================
-By Badboy
 EOF
