@@ -2,11 +2,10 @@
 # Script by : Badboy
 clear
 echo -e ""
-echo -e "======================================"
-echo -e ""
-echo -e "       AutoScriptVPS by Badboy        "
-echo -e ""
-echo -e "======================================"
+echo -e "\e[1;33m==============================================================="
+echo -e "\e[1;36m                    AutoScriptVPS by  Badboy                   "
+echo -e "\e[1;36m                           Redfox VPN                          "
+echo -e "\e[1;33m==============================================================="
 read -p "         Username       :  " User
 egrep "^$User" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
@@ -22,23 +21,27 @@ egrep "^$User" /etc/passwd >/dev/null
 echo -e "$Pass\n$Pass\n"|passwd $User &> /dev/null
 clear
 echo -e ""
-echo -e "========================================"
+echo -e "\e[1;33m==============================================================="
+echo -e "\e[1;36m                    AutoScriptVPS by  Badboy                   "
+echo -e "\e[1;36m                           Redfox VPN                          "
+echo -e "\e[1;33m==============================================================="
 echo -e ""
-echo -e "    AutoScriptVPS by Badboy             "
+echo -e "\e[1;33m========================================"
+echo -e "\e[1;32m    Username        :\e[1;34m  $User"
+echo -e "\e[1;32m    Days Added      :\e[1;34m  $Days Days"
+echo -e "\e[1;32m    Expires on      :\e[1;34m  $Expiration_Display"
 echo -e ""
-echo -e "    Username        :  $User"
-echo -e "    Days Added      :  $Days Days"
-echo -e "    Expires on      :  $Expiration_Display"
-echo -e ""
-echo -e "========================================"
+echo -e "\e[1;33m========================================"
 else
 clear
 echo -e ""
-echo -e "========================================"
+echo -e "\e[1;33m==============================================================="
+echo -e "\e[1;36m                    AutoScriptVPS by  Badboy                   "
+echo -e "\e[1;36m                           Redfox VPN                          "
+echo -e "\e[1;33m==============================================================="
 echo -e ""
-echo -e "      AutoScriptVPS by Badboy           "
+echo -e "\e[1;33m========================================"
+echo -e "\e[1;32m        Username Doesnt Exist           "
 echo -e ""
-echo -e "        Username Doesnt Exist           "
-echo -e ""
-echo -e "========================================"
+echo -e "\e[1;33m========================================"
 fi
