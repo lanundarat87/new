@@ -1,4 +1,9 @@
 #!/bin/bash
+reset
+echo -e "\e[1;33m==============================================================="
+echo -e "\e[1;36m                    AutoScriptVPS by  Badboy                   "
+echo -e "\e[1;36m                           Redfox VPN                          "
+echo -e "\e[1;33m==============================================================="
 IP=$(wget -qO- icanhazip.com);
 echo "Please enter the username you want to set (do not repeat, does not support Chinese, will be reported incorrect!)"
 read -e -p "(Default: ):" ssr_user
@@ -50,4 +55,3 @@ echo -e " Expired On    : ${exp} "
 echo "==================================================="
 echo -e " Link SSR      : ${ssr_link}"
 echo "==================================================="
-echo -e " Lost Server"
