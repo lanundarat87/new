@@ -1,4 +1,9 @@
 #!/bin/bash
+reset
+echo -e "\e[1;33m==============================================================="
+echo -e "\e[1;36m                    AutoScriptVPS by  Badboy                   "
+echo -e "\e[1;36m                           Redfox VPN                          "
+echo -e "\e[1;33m==============================================================="
 read -p "bug : " bughost
 IP=$(wget -qO- icanhazip.com);
 echo Script AutoCreate Akun SSH dan OpenVPN by Badboy
