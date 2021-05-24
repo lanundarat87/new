@@ -6,10 +6,10 @@ MYIP=$(wget -qO- icanhazip.com);
 echo "Checking VPS....."
 IZIN=$( curl https://raw.githubusercontent.com/lanundarat87/new/main/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
-echo "${green}Permission Accepted...${NC}"
+echo -e "${green}Permission Accepted...${NC}"
 else
 echo "${red}Permission Denied!${NC}";
-echo "Only For Premium Users"
+echo -e "Only For Premium Users"
 rm -f setup.sh
 exit 0
 fi
