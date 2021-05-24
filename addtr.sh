@@ -1,4 +1,9 @@
 #!/bin/bash
+reset
+echo -e "\e[1;33m==============================================================="
+echo -e "\e[1;36m                    AutoScriptVPS by  Badboy                   "
+echo -e "\e[1;36m                           Redfox VPN                          "
+echo -e "\e[1;33m==============================================================="
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
@@ -33,5 +38,4 @@ echo -e "link           : ${trojanlink}"
 echo -e "================================="
 echo -e "Expired On     : $exp"
 echo -e ""
-echo -e "By Badboy"
 
