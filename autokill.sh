@@ -1,11 +1,11 @@
 #!/bin/bash
-# Script by : LostServer
-clear
+reset
+echo -e "\e[1;33m==============================================================="
+echo -e "\e[1;36m                    AutoScriptVPS by  Badboy                   "
+echo -e "\e[1;36m                           Redfox VPN                          "
+echo -e "\e[1;33m==============================================================="
 echo -e ""
 echo -e "======================================"
-echo -e ""
-echo -e "     AutoScriptVPS by Badboy      "
-echo -e ""
 echo -e "     [1]  AutoKill After 5 Minutes"
 echo -e "     [2]  AutoKill After 15 Minutes"
 echo -e "     [3]  AutoKill After 30 Minutes"
