@@ -1,6 +1,6 @@
 #!/bin/bash
 
-clear
+reset
 echo -e "\e[1;33m================================================="
 echo -e "#\e[1;32m Script Auto Install SSH & OpenVPN             \e[1;33m#"
 echo -e "\e[1;33m#-----------------------------------------------#"
