@@ -1,4 +1,9 @@
 #!/bin/bash
+reset
+echo -e "\e[1;33m==============================================================="
+echo -e "\e[1;36m                    AutoScriptVPS by  Badboy                   "
+echo -e "\e[1;36m                           Redfox VPN                          "
+echo -e "\e[1;33m==============================================================="
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-l2tp")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
@@ -36,4 +41,3 @@ echo " =========================="
 echo " Client Name : $VPN_USER"
 echo " Expired On  : $exp"
 echo " =========================="
-echo " By Badboy"
