@@ -10,7 +10,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
-echo "Checking VPS"
+echo "Checking VPS....."
 IZIN=$( curl https://raw.githubusercontent.com/lanundarat87/new/main/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
@@ -22,7 +22,7 @@ exit 0
 fi
 mkdir /var/lib/premium-script;
 echo "Enter the VPS Subdomain Hostname, if not available, please click Enter"
-read -p "Hostname / Domain: " host
+read -p "\e[1;32mHostname / Domain: " host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 wget https://raw.githubusercontent.com/lanundarat87/new/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 wget https://raw.githubusercontent.com/lanundarat87/new/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
