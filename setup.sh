@@ -21,7 +21,7 @@ rm -f setup.sh
 exit 0
 fi
 mkdir /var/lib/premium-script;
-echo -e "\e[1;32mEnter the VPS Subdomain Hostname, if not available, please click Enter"
+echo "Enter the VPS Subdomain Hostname, if not available, please click Enter"
 read -p "Hostname / Domain: " host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 wget https://raw.githubusercontent.com/lanundarat87/new/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
