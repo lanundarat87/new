@@ -49,7 +49,5 @@ IPsec PSK    : vpn
 Username     : $VPN_USER
 Password     : $VPN_PASSWORD
 Expired ON   : $exp
-
-By Badboy
 =================================
 EOF
