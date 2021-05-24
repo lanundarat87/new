@@ -6,7 +6,6 @@ echo -e "\e[1;36m                           Redfox VPN                          
 echo -e "\e[1;33m==============================================================="
 read -p "bug : " bughost
 IP=$(wget -qO- icanhazip.com);
-echo Script AutoCreate Akun SSH dan OpenVPN by Badboy
 sleep 1
 echo Ping Host
 echo Cek Hak Akses...
