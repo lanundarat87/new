@@ -27,10 +27,8 @@ check_pid(){
 	PID=`ps -ef |grep -v grep | grep server.py |awk '{print $2}'`
 }
 Add_iptables(){
-		iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 7443:7543 -j ACCEPT
-		iptables -I INPUT -m state --state NEW -m udp -p udp --dport 7443:7543 -j ACCEPT
-		ip6tables -I INPUT -m state --state NEW -m tcp -p tcp --dport 7443:7543 -j ACCEPT
-		ip6tables -I INPUT -m state --state NEW -m udp -p udp --dport 7443:7543 -j ACCEPT
+		iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 1443:1543 -j ACCEPT
+		iptables -I INPUT -m state --state NEW -m udp -p udp --dport 1443:1543 -j ACCEPT
 }
 Save_iptables(){
 if [[ ${OS} == "centos" ]]; then
@@ -38,7 +36,6 @@ if [[ ${OS} == "centos" ]]; then
 		service ip6tables save
 else
 		iptables-save > /etc/iptables.up.rules
-		ip6tables-save > /etc/ip6tables.up.rules
 fi
 }
 Set_iptables(){
@@ -49,7 +46,6 @@ if [[ ${OS} == "centos" ]]; then
 		chkconfig --level 2345 ip6tables on
 else
 		iptables-save > /etc/iptables.up.rules
-		ip6tables-save > /etc/ip6tables.up.rules
 		echo -e '#!/bin/bash\n/sbin/iptables-restore < /etc/iptables.up.rules\n/sbin/ip6tables-restore < /etc/ip6tables.up.rules' > /etc/network/if-pre-up.d/iptables
 		chmod +x /etc/network/if-pre-up.d/iptables
 fi
@@ -126,7 +122,7 @@ if [[ ${OS} == "centos" ]]; then
 }
 Start_SSR(){
 	check_pid
-	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/lanundarat87/new/main/ssrmu.sh"
+	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/lanundarat87/vpsauto/main/ssrmu"
 	/etc/init.d/ssrmu start
 }
 Install_SSR(){
@@ -142,11 +138,9 @@ Save_iptables
 Start_SSR
 }
 Install_SSR
-wget -O /usr/bin/ssr https://raw.githubusercontent.com/lanundarat87/new/main/ssr.sh && chmod +x /usr/bin/ssr
-wget -O /usr/bin/addssr https://raw.githubusercontent.com/lanundarat87/new/main/addssr.sh && chmod +x /usr/bin/addssr
-wget -O /usr/bin/delssr https://raw.githubusercontent.com/lanundarat87/new/main/delssr.sh && chmod +x /usr/bin/delssr
-wget -O /usr/bin/xp-ssr https://raw.githubusercontent.com/lanundarat87/new/main/xp-ssr.sh && chmod +x /usr/bin/xp-ssr
-wget -O /usr/bin/renewssr https://raw.githubusercontent.com/lanundarat87/new/main/renewssr.sh && chmod +x /usr/bin/renewssr
+wget -O /usr/bin/ssr https://raw.githubusercontent.com/lanundarat87/vpsauto/main/ssrmu.sh && chmod +x /usr/bin/ssr
+wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/lanundarat87/vpsauto/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
+wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/lanundarat87/vpsauto/main/del-ssr.sh && chmod +x /usr/bin/del-ssr
+wget -O /usr/bin/renew-ssr https://raw.githubusercontent.com/lanundarat87/vpsauto/main/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh
-echo "0 0 * * * root xp-ssr" >> /etc/crontab
